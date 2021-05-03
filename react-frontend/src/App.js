@@ -1,4 +1,3 @@
-import ResultPanel from "./ResultPanel";
 import { Component } from 'react';
 import Form from "./Form";
 import axios from 'axios';
@@ -7,12 +6,11 @@ import axios from 'axios';
 
 export default class App extends Component {
 
-  // 1- Expose the FUCKING API --> done
+  // TO Dos:
+  // 1- Expose the  API --> done
   // 2- Retrieve the data from the API on button click 
-  // 3- update the fucking state when the button is pressed
-  // 4- display the fucking result
-
-  
+  // 3- update the  state when the button is pressed
+  // 4- display the  result
 
   render() {
     
@@ -24,7 +22,6 @@ export default class App extends Component {
         </header>
 
         <Form />
-
 
       </body>
 

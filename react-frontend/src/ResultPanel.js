@@ -23,7 +23,6 @@ export default class ResultPanel extends Component {
 
         return (
             <ResultPanelBody number={number} result={result}/>
-
         )
     }
 }
