@@ -1,23 +1,35 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Model.UserInput;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+//import org.apache.catalina.User;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.ui.Model;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.sql.SQLOutput;
+
+@RestController
+@RequestMapping("api/main")
+@CrossOrigin
 public class MainController {
 
-    @PostMapping("/main")
-    public void onSubmit(@ModelAttribute("userInput") UserInput userInput) {
+    UserInput userInput = new UserInput();
+
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public String onSubmit(@RequestBody (required = false) String input) {
+        int num = Integer.parseInt(input);
+        userInput.setPosNumber(num);
+        return userInput.isPrime();
     }
 
-    @GetMapping("/main")
-    public void onGet(Model model) {
-        UserInput userInput = new UserInput();
-        model.addAttribute("userInput", userInput);
-    }
+//    @GetMapping
+//    public String onGet() {
+//        return " ";
+//    }
 
 }

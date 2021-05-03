@@ -1,11 +1,12 @@
 package com.example.demo.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 public class UserInput {
 
-
+    @JsonProperty
     private int posNumber;
 
     public UserInput() {
@@ -22,15 +23,15 @@ public class UserInput {
 
     public String isPrime() {
 
-        if (posNumber <= 1) {
-            return " NOT prime.";
+        if (this.posNumber <= 1) {
+            return " is NOT Prime.";
         }
-        for (int i = 2; i <= Math.sqrt(posNumber); i++) {
-            if (posNumber % i == 0) {
-                return " NOT prime.";
+        for (int i = 2; i <= Math.sqrt(this.posNumber); i++) {
+            if (this.posNumber % i == 0) {
+                return " is NOT Prime.";
             }
         }
-        return " prime.";
+        return " is Prime.";
     }
 
 } //class end

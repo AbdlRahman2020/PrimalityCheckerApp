@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  color : #5D6063;
+  background-color: #c2e4e1;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.primality-checker-header {
+  text-align: center;
+  background-color: #F6F7F8;
+  border: 1px solid #5D6063;
+  border-radius: 3px;
+
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+}
+
+.primality-checker-header h1 {
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+
+.primality-check-form {
+  background-color: #F6F7F8;
+  border: 1px solid #0076ec;
+  border-radius: 3px;
+  
+
+  width: 85%;
+  padding: 50px;
+  margin: 0 0 40px 0;
+}
+
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+}
+
+.form-row input[type='number'] {
+  background-color: #FFFFFF;
+  border: 1px solid #d0d6dd;
+  border-radius: 3px;
+  width: 80%;
+  padding: 7px;
+  font-size: 15px;
+}
+
+.form-row label {
+  margin-bottom: 15px;
+}
+
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: 1px;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}
+
+.resultPanel {
+  background-color: #b9f899;
+  border: 2px solid #7ec5d1;
+  border-radius: 3px;
+
+  width: 80%;
+  padding: 8px;
+  margin: 0 0 15px 20px;
+  text-align:center;
+}
+
+.result-text{
+  font-size: 17px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
