@@ -6,12 +6,6 @@ import axios from 'axios';
 
 export default class App extends Component {
 
-  // TO Dos:
-  // 1- Expose the  API --> done
-  // 2- Retrieve the data from the API on button click 
-  // 3- update the  state when the button is pressed
-  // 4- display the  result
-
   render() {
     
     return (
