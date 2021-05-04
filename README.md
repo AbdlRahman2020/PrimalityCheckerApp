@@ -24,10 +24,10 @@
     * The backend tests under tests/java/com.example.demo
     * The repo contains both Unit tests for Models and Integration tests for Controllers
     * curl:
-    ```
+```
     curl --location --request POST 'http://localhost:8080/api/main' \
     --header 'Content-Type: application/json' \
     --data-raw '2'
-    ```
+```
 
 ## Thanks for reading.
