@@ -38,12 +38,15 @@ export default class Form extends Component {
       .then(results => {
         this.setState({ checkResult: results })
       })
-      .catch(error => console.log('error', error));
+      .catch(error => {  
+        alert("Failure. Couldn't reach server!") // Couldn't retrieve data from backend server
+      }
+        );
   }
 
   render() {
     const data = this.state;
-    
+
     return (
       <form onSubmit={this.handleSubmit}
         action='POST' method='handleSubmit' className='primality-check-form'>
