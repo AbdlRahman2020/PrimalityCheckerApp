@@ -1,22 +1,21 @@
 # Verisign Internship 2021
 
-
-
 ### Prerequisites:
 1. Java 8+
 2. Maven 3.2+
 3. npm
 
 ## Quickstart
-### Backend
+
+#### Backend
 1. Clone this repo to your local machine.
 2. import "internship2021/demo" into your Eclipcse, Intellij or any other modern Java IDE.
 3. Build the project using Maven.
 4. Run DemoApplication from src/main/java/DemoApplication.
 
-### Frontend
+#### Frontend
 1. Navigate to "internship2021/react-frontend
-2. Start the project from terminal 'npm -start', it should open a new windows on your browser at localhost:3000
+2. Start the project from terminal 'npm -start', it should open a new window on your browser or you can manually go to localhost:3000
 
 ## Testing
 
