@@ -15,7 +15,8 @@
 
 #### Frontend
 1. Navigate to "internship2021/react-frontend
-2. Start the project from terminal 'npm -start', it should open a new window on your browser or you can manually go to localhost:3000
+2. from the termina 'npm install'
+3. Start the project from terminal 'npm -start', it should open a new window on your browser or you can manually go to localhost:3000
 
 ## Testing
 
