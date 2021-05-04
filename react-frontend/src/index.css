@@ -110,13 +110,20 @@ body {
   border-radius: 3px;
 
   width: 80%;
-  padding: 8px;
-  margin: 0 0 15px 20px;
+  padding: 10px;
+  margin: 0 0 15px 25px;
   text-align:center;
 }
 
-.result-text{
-  font-size: 17px;
+.result-title{
+  font-size: 18px;
   margin-bottom: 20px;
   font-weight: bold;
+}
+
+.result-body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: hsl(12, 100%, 50%);
 }

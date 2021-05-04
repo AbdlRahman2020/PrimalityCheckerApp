@@ -1,8 +1,5 @@
 import { Component } from 'react';
 import Form from "./Form";
-import axios from 'axios';
-
-//let number = this.getElementById("number").value;
 
 export default class App extends Component {
 
@@ -16,9 +13,8 @@ export default class App extends Component {
         </header>
 
         <Form />
-
+        
       </body>
-
     );
   }
 }

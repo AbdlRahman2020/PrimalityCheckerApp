@@ -3,31 +3,28 @@ import { Component } from 'react';
 
 export default class Form extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state =
-    {
-      result: ' is Prime',
-      inputNumber: 2
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
+  // class properties
+  data = {
+    inputNumber: '', 
+    checkResult: ' '
   }
+  state = this.data; // Initial state
 
+  // handles button submit
   handleSubmit = (event) => {
-    const { value } = event.target.numberField
-    console.log(value);
-    const url = "http://localhost:8080/api/main";
-    
+    event.preventDefault();
+    const { value } = event.target.numberField // Retrieves user's input
+    //console.log(value);
     this.setState({
-      inputNumber: value
+      inputNumber: value // changing initial state to user's input.
     })
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    const url = "http://localhost:8080/api/main"; // API endpoint
+    var myHeaders = new Headers();               
+    myHeaders.append("Content-Type", "application/json");  // POST Request headers
 
-    var raw = JSON.stringify(this.state.inputNumber);
-    console.log('raw: ' +raw);
-
+    var raw = parseInt(value); //JSON.stringify(value);
+  
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
@@ -35,25 +32,23 @@ export default class Form extends Component {
       redirect: 'follow'
     };
 
-    
-    fetch(url, requestOptions)
+
+    fetch(url, requestOptions) // making API call.
       .then(response => response.text())
       .then(results => {
-        this.setState({ result: results })
+        this.setState({ checkResult: results })
       })
       .catch(error => console.log('error', error));
   }
 
   render() {
-    const resultData = this.state;
-    const inputNumber = this.state.inputNumber;
-    console.log(resultData)
-    console.log(inputNumber)
+    const data = this.state;
+    
     return (
       <form onSubmit={this.handleSubmit}
         action='POST' method='handleSubmit' className='primality-check-form'>
-        <div className='form-row'>
 
+        <div className='form-row'>
           <label for='numberField'>Enter a number below to start</label>
 
           <input type="number" name="numberField"
@@ -62,15 +57,19 @@ export default class Form extends Component {
             id="numberField" required></input>
 
           <div className='form-row'>
-            <button 
+            <button
               type="submit"
               id="submitButton">Check for Primality</button>
           </div>
         </div>
-        <ResultPanel number={inputNumber} result={resultData} />
+
+        <div>
+          {/* Passing the data to  Result Panel class */}
+          <ResultPanel data={data} /> 
+        </div>
+
       </form>
+
     );
   }
 }
-
-//onClick={() => this.setState({ inputNumber })}

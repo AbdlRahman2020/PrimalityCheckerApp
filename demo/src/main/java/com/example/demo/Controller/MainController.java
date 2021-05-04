@@ -21,15 +21,14 @@ public class MainController {
     UserInput userInput = new UserInput();
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public String onSubmit(@RequestBody (required = false) String input) {
+    public String onSubmit(@RequestBody(required = false) String input) {
         int num = Integer.parseInt(input);
         userInput.setPosNumber(num);
         return userInput.isPrime();
     }
 
-//    @GetMapping
-//    public String onGet() {
-//        return " ";
-//    }
-
+  /*  @GetMapping
+    public String onGet() {
+        return " ";
+    } */
 }
