@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.sql.SQLOutput;
 
 @RestController
@@ -22,7 +23,7 @@ public class MainController {
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public String onSubmit(@RequestBody(required = false) String input) {
-        int num = Integer.parseInt(input);
+        BigInteger num = new BigInteger(input);
         userInput.setPosNumber(num);
         return userInput.isPrime();
     }
