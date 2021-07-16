@@ -1,4 +1,4 @@
-# Verisign Internship 2021
+# Primality Checker App
 
 ### Prerequisites:
 1. Java 8+
